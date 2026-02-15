@@ -38,7 +38,7 @@ def mostrar_cabecera():
         st.markdown("<div class='header-text'>Aplicación de Encuesta</div>", unsafe_allow_html=True)
 
 # --- FUNCIONES DE DATOS ---
-FILE_PATH = r"C:\Michael\ESCUELA_GLOBAL\C10_STREAMLIT\C03_Encuesta.csv"
+FILE_PATH = r"C03_Encuesta.csv"
 
 def load_data():
     if os.path.exists(FILE_PATH):
@@ -141,3 +141,4 @@ elif menu == "Analisis":
     else:
 
         st.warning("No hay datos para analizar.")
+
