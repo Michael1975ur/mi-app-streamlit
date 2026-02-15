@@ -110,6 +110,10 @@ elif menu == "Respuestas":
             fig3 = px.histogram(df, x="PREG3", nbins=5, color_discrete_sequence=['#29b09d'])
             st.plotly_chart(fig3, use_container_width=True)
 
+            st.write(f"**P5: {PREGUNTAS[4]}**")
+            fig5 = px.bar(df["PREG5"].value_counts(), title="Distribución de Frecuencia")
+            st.plotly_chart(fig5, use_container_width=True)
+
         with c2:
             st.write(f"**P2: {PREGUNTAS[1]}**")
             fig2 = px.bar(df["PREG2"].value_counts(), title="Distribución de Frecuencia")
@@ -141,4 +145,5 @@ elif menu == "Analisis":
     else:
 
         st.warning("No hay datos para analizar.")
+
 
