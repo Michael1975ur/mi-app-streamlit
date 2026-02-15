@@ -31,7 +31,7 @@ def mostrar_cabecera():
     col1, col2 = st.columns([1, 6])
     with col1:
         try:
-            st.image("C:\Michael\ESCUELA_GLOBAL\C10_STREAMLIT\C02_logo_empresa.jpg", width=120)
+            st.image("C02_logo_empresa.jpg", width=120)
         except:
             st.info("Logo Empresa")
     with col2:
@@ -139,4 +139,5 @@ elif menu == "Analisis":
         fig_sun = px.sunburst(df, path=['PREG1', 'PREG4', 'PREG3'], values='PREG2')
         st.plotly_chart(fig_sun, use_container_width=True)
     else:
+
         st.warning("No hay datos para analizar.")
